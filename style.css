@@ -88,7 +88,7 @@ header {
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #4da6ff;
+  background: #3385cc;
   transition: width 0.3s ease;
 }
 
@@ -137,7 +137,7 @@ header {
 }
 
 input:checked + .slider {
-  background: #4da6ff;
+  background: #3385cc;
 }
 
 input:checked + .slider:before {
@@ -178,7 +178,7 @@ input:checked + .slider:before {
 .btn {
   display: inline-block;
   padding: 10px 20px;
-  background: #4da6ff;
+  background: #3385cc;
   color: #fff;
   border-radius: 6px;
   font-weight: 600;
@@ -186,7 +186,7 @@ input:checked + .slider:before {
 }
 
 .btn:hover {
-  background: #1e90ff;
+  background: #1f6fbf;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(77, 166, 255, 0.3);
 }
@@ -232,7 +232,7 @@ input:checked + .slider:before {
 }
 
 .social-links a:hover {
-  color: #4da6ff;
+  color: #3385cc;
   transform: translateY(-3px);
 }
 
@@ -384,3 +384,4 @@ body.light-theme footer { background: #f9f9f9; color: #333; }
     margin: 0 auto;
   }
 }
+
