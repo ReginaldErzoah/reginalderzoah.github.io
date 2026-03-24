@@ -166,6 +166,7 @@ header {
   flex-direction: column; /* Stack vertically */
   gap: 30px; /* Space between cards */
   width: 100%;
+  align-items: center; /* Center the cards */
 }
 
 /* Clean card */
@@ -177,6 +178,9 @@ header {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
+  
+  max-width: 800px; /* Limit card width */
+  width: 100%;       /* Take full width up to max-width */
 }
 
 /* Subtle hover */
