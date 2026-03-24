@@ -160,11 +160,12 @@ header {
   margin-bottom: 10px;
 }
 
-/* Responsive grid */
+/* Single column layout */
 .project-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  gap: 30px; /* Space between cards */
+  width: 100%;
 }
 
 /* Clean card */
@@ -215,7 +216,6 @@ header {
   margin-top: auto;
   align-self: flex-start;
 }
-
 /* ========== Footer ========== */
 footer {
   background: #111;
