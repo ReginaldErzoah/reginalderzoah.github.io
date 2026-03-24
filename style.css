@@ -27,6 +27,7 @@ img {
 
 section {
   padding: 80px 10%;
+  scroll-margin-top: 100px; /* offset for sticky header height */
 }
 
 /* ========== Navigation ========== */
