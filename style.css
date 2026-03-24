@@ -191,7 +191,7 @@ header {
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  align-items: center; /* center the cards */
+  align-items: flex-start; /* left align the cards */
 }
 
 /* Horizontal project card */
@@ -203,7 +203,7 @@ header {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
-  max-width: 100%; /* limit card width */
+  max-width: 900px; /* limit card width */
   width: 100%;
 }
 
