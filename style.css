@@ -226,7 +226,7 @@ header {
   height: auto;         
   max-height: 200px;   
   object-fit: cover;
-  padding: 10px;          
+  padding: 20px;          
   box-sizing: border-box;
 }
 
@@ -235,7 +235,7 @@ header {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  width: 60%; /* info takes remaining 60% */
+  width: 90%; /* info takes remaining 60% */
 }
 
 .project-info h3 {
