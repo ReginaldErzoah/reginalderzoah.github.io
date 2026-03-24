@@ -217,6 +217,7 @@ header {
   overflow: hidden;
   transition: 0.25s ease;
   width: 100%;
+  align-items: flex-start; /* aligns top of image and info */
 }
 
 /* Image on the left */
@@ -226,8 +227,9 @@ header {
   height: auto;         
   max-height: 200px;   
   object-fit: cover;
-  padding: 20px;          
+  padding: 10px;         /* space from card borders */
   box-sizing: border-box;
+  align-self: flex-start; /* ensures image top aligns with info */
 }
 
 /* Project info on the right */
