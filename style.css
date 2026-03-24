@@ -147,8 +147,18 @@ header {
 /* Social links beneath profile image */
 .social-links {
   display: flex;
-  gap: 15px;
+  gap: 20px;         /* slightly bigger gap */
   justify-content: center;
+}
+
+.social-links a {
+  font-size: 1.5rem;       /* bigger icons */
+  color: inherit;           /* default color */
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3385cc;           /* turn blue on hover */
 }
 
 /* Right side: about text */
