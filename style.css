@@ -160,48 +160,41 @@ header {
   margin-bottom: 10px;
 }
 
-/* Single column layout */
+/* Single column layout with horizontal cards */
 .project-list {
   display: flex;
-  flex-direction: column; /* Stack vertically */
-  gap: 30px; /* Space between cards */
+  flex-direction: column;
+  gap: 30px;
   width: 100%;
-  align-items: center; /* Center the cards */
+  align-items: center; /* center the cards */
 }
 
-/* Clean card */
+/* Horizontal project card */
 .project-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* image left, info right */
   background: #1a1a1a;
   border: 1px solid #2a2a2a;
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
-  
-  max-width: 800px; /* Limit card width */
-  width: 100%;       /* Take full width up to max-width */
+  max-width: 900px; /* limit card width */
+  width: 100%;
 }
 
-/* Subtle hover */
-.project-card:hover {
-  transform: translateY(-5px);
-  border-color: #3385cc;
-}
-
-/* Image */
+/* Image on the left */
 .project-card img {
-  width: 100px;
-  height: 200px;
+  width: 40%; /* image takes 40% of card */
+  height: auto;
   object-fit: cover;
 }
 
-/* Content */
+/* Project info on the right */
 .project-info {
   display: flex;
   flex-direction: column;
   padding: 20px;
-  height: 100%;
+  width: 60%; /* info takes remaining 60% */
 }
 
 .project-info h3 {
@@ -220,6 +213,13 @@ header {
   margin-top: auto;
   align-self: flex-start;
 }
+
+/* Card hover effect */
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: #3385cc;
+}
+
 /* ========== Footer ========== */
 footer {
   background: #111;
@@ -246,7 +246,7 @@ body.light-theme .project-card {
 /* ========== Responsive ========== */
 @media (max-width: 1024px) {
   .project-list {
-    grid-template-columns: 1fr;
+    width: 100%;
   }
 }
 
@@ -279,5 +279,15 @@ body.light-theme .project-card {
   .about {
     flex-direction: column;
     text-align: center;
+  }
+
+  /* Stack project cards vertically on small screens */
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card img,
+  .project-info {
+    width: 100%;
   }
 }
