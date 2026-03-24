@@ -226,6 +226,8 @@ header {
   height: auto;         
   max-height: 200px;   
   object-fit: cover;
+  padding: 10px;          
+  box-sizing: border-box;
 }
 
 /* Project info on the right */
