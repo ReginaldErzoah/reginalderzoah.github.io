@@ -203,14 +203,14 @@ header {
   border-radius: 12px;
   overflow: hidden;
   transition: 0.25s ease;
-  max-width: 900px; /* limit card width */
+  max-width: 100%; /* limit card width */
   width: 100%;
 }
 
 /* Image on the left */
 .project-card img {
   width: 40%; /* image takes 40% of card */
-  height: auto;
+  height: 40%;
   object-fit: cover;
 }
 
