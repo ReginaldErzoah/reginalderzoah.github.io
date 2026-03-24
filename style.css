@@ -132,6 +132,8 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 20px;
+  flex-shrink: 0;        /* prevent shrinking */
+  width: 220px;          /* fixed width for profile + social icons */
 }
 
 /* Profile image */
@@ -139,6 +141,7 @@ header {
   width: 200px;
   height: 200px;
   border-radius: 50%;
+  object-fit: cover;      /* ensures image fills its box */
 }
 
 /* Social links beneath profile image */
@@ -150,8 +153,8 @@ header {
 
 /* Right side: about text */
 .about-right {
-  flex: 1; /* take remaining width */
-  min-width: 300px; /* ensures it doesn’t get too narrow */
+  flex: 1;               /* take remaining width */
+  min-width: 300px;      /* ensures it doesn’t get too narrow */
 }
 
 /* Responsive: stack vertically on small screens */
