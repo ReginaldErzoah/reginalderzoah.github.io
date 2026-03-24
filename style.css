@@ -154,7 +154,13 @@ header {
   opacity: 0.85;
 }
 
-/* 🔥 Responsive grid */
+.tech {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* Responsive grid */
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -204,7 +210,7 @@ header {
   opacity: 0.9;
 }
 
-/* ✅ Button always aligned */
+/* Button always aligned */
 .project-info .btn {
   margin-top: auto;
   align-self: flex-start;
