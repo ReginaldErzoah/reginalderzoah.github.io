@@ -211,8 +211,9 @@ header {
 
 /* Image on the left */
 .project-card img {
-  width: 40%; /* image takes 40% of card */
-  height: 40px;
+  width: 30%;        
+  max-width: 250px;  
+  height: auto;
   object-fit: cover;
 }
 
