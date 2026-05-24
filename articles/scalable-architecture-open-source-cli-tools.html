@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Scalable Architecture for Open Source CLI Tools | Reginald Erzoah</title>
+
+  <meta
+    name="description"
+    content="A practical article on designing scalable, maintainable, and contributor-friendly architecture for open-source CLI tools."
+  />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="articles-page-body">
+  <main class="article-shell section-pad">
+    <a class="project-button article-back-button" href="./index.html">
+      Articles
+
+      <span class="arrow-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+        </svg>
+      </span>
+    </a>
+
+    <article class="article-content reveal">
+      <div class="article-meta">
+        <span>Open Source Tooling</span>
+        <span>·</span>
+        <span>6 min read</span>
+      </div>
+
+      <h1 class="article-title">
+        Scalable Architecture for Open Source CLI Tools
+      </h1>
+
+      <p>
+        Many open-source CLI tools begin as small personal utilities. A simple
+        script solves a real problem, gains a few users, attracts contributors,
+        and eventually becomes a serious engineering project.
+      </p>
+
+      <p>
+        The challenge is that most CLI tools are not designed to scale from the
+        beginning. As features grow, business logic gets mixed with command
+        handlers, reporting becomes tightly coupled, tests become fragile, and
+        contributors struggle to understand where things belong.
+      </p>
+
+      <h2>Keep the CLI Layer Thin</h2>
+
+      <p>
+        A scalable CLI should not contain the core logic of the application. The
+        command layer should mainly validate input, call internal services, and
+        present results to the user.
+      </p>
+
+      <p>
+        This keeps the tool flexible. The same core logic can later power a
+        Python API, a web service, a background job, or a different interface
+        without rewriting the system.
+      </p>
+
+      <h2>Separate Concerns Early</h2>
+
+      <p>
+        Good CLI architecture separates responsibilities clearly. File reading,
+        core computation, reporting, configuration, validation, and user
+        interaction should not all live in one file.
+      </p>
+
+      <p>
+        A healthy structure might include separate modules for CLI commands,
+        core logic, input/output, reports, utilities, and tests. This makes the
+        project easier to reason about and easier for contributors to extend.
+      </p>
+
+      <h2>Design for Extension</h2>
+
+      <p>
+        Open-source tools rarely stay small. Users eventually request new file
+        formats, new reports, new integrations, plugins, configuration options,
+        and automation support.
+      </p>
+
+      <p>
+        Designing around extension does not mean overengineering. It means
+        avoiding tightly coupled decisions that make future features painful.
+        Reporting systems, readers, validators, and exporters should be modular
+        enough to grow independently.
+      </p>
+
+      <h2>Testing Is Architecture</h2>
+
+      <p>
+        Tests are not just a safety net. They shape how maintainable the project
+        becomes. If the CLI is tightly coupled to the core logic, testing becomes
+        difficult. If the logic is modular, testing becomes natural.
+      </p>
+
+      <p>
+        Strong CLI projects usually need unit tests, CLI behavior tests,
+        regression tests, and example-based tests. These give maintainers
+        confidence when refactoring and give contributors confidence when making
+        changes.
+      </p>
+
+      <h2>Developer Experience Matters</h2>
+
+      <p>
+        CLI tools are used through commands, help text, error messages, logs,
+        reports, and documentation. These details matter. A technically strong
+        tool can still feel difficult to use if the interface is confusing.
+      </p>
+
+      <p>
+        Good developer experience means helpful errors, predictable commands,
+        readable outputs, strong examples, and sensible defaults. The best tools
+        reduce friction for both users and contributors.
+      </p>
+
+      <h2>Performance Should Be Intentional</h2>
+
+      <p>
+        Many data-focused CLI tools eventually need to handle larger files and
+        more complex workflows. Performance decisions should be intentional from
+        the beginning, especially around memory usage, file reading, and report
+        generation.
+      </p>
+
+      <p>
+        This does not mean optimizing everything early. It means choosing
+        foundations that will not block future scale.
+      </p>
+
+      <h2>Conclusion</h2>
+
+      <p>
+        Scalable CLI architecture is not about making a small project
+        complicated. It is about building foundations that allow the project to
+        evolve without becoming fragile.
+      </p>
+
+      <p>
+        A good CLI tool should be easy to use, easy to test, easy to extend, and
+        easy for contributors to understand. That is what allows open-source
+        tooling to grow from a useful script into reliable infrastructure.
+      </p>
+    </article>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Sticky quick navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#open-source">OSS</a>
+    <a href="./index.html">Articles</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+
+  <script src="../script.js"></script>
+</body>
+</html>

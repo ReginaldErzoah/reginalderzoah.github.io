@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Building Practical ML Systems Beyond Notebooks | Reginald Erzoah</title>
+
+  <meta
+    name="description"
+    content="A practical article on moving machine learning work beyond notebooks into reliable, usable, and maintainable ML systems."
+  />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="articles-page-body">
+  <main class="article-shell section-pad">
+    <a class="project-button article-back-button" href="./index.html">
+      Articles
+
+      <span class="arrow-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+        </svg>
+      </span>
+    </a>
+
+    <article class="article-content reveal">
+      <div class="article-meta">
+        <span>Machine Learning Engineering</span>
+        <span>·</span>
+        <span>8 min read</span>
+      </div>
+
+      <h1 class="article-title">
+        Building Practical ML Systems Beyond Notebooks
+      </h1>
+
+      <p>
+        Many machine learning projects begin inside notebooks. That is a good
+        thing. Notebooks are useful for exploration, experimentation,
+        visualization, and rapid iteration.
+      </p>
+
+      <p>
+        But a notebook is not the same as a machine learning system. A model may
+        perform well during experimentation, but real-world value comes from
+        turning that model into something reliable, usable, reproducible, and
+        maintainable.
+      </p>
+
+      <h2>The Model Is Not the Whole System</h2>
+
+      <p>
+        One of the biggest mistakes in machine learning is treating the model as
+        the final product. In reality, the model is only one part of a larger
+        workflow.
+      </p>
+
+      <p>
+        A practical ML system needs data ingestion, preprocessing, validation,
+        feature engineering, inference, explainability, monitoring, deployment,
+        and user interaction. Without these surrounding parts, even a strong
+        model can become difficult to use.
+      </p>
+
+      <h2>Reproducibility Comes First</h2>
+
+      <p>
+        Notebook workflows can easily become inconsistent. Hidden state, manual
+        steps, changing environments, and undocumented preprocessing can make it
+        hard to reproduce results.
+      </p>
+
+      <p>
+        A practical ML system should make results repeatable. This means fixed
+        dependencies, clear project structure, reusable functions, versioned
+        data, and consistent environments. Docker, virtual environments, and
+        well-defined pipelines can make a major difference.
+      </p>
+
+      <h2>Data Pipelines Matter More Than Expected</h2>
+
+      <p>
+        Many ML problems are not model problems. They are data problems. Missing
+        values, duplicate records, inconsistent schemas, leakage, and distribution
+        changes can quietly damage model performance.
+      </p>
+
+      <p>
+        This is why data validation should happen before training and before
+        inference. A system that checks data quality early is more trustworthy
+        than one that only evaluates model metrics after training.
+      </p>
+
+      <h2>Separate Training From Inference</h2>
+
+      <p>
+        In notebooks, training, evaluation, inference, and visualization often
+        live together. In a real system, these responsibilities should be
+        separated.
+      </p>
+
+      <p>
+        Training pipelines are responsible for producing models. Inference
+        systems are responsible for making predictions. Evaluation workflows are
+        responsible for measuring performance. This separation makes the system
+        easier to test, deploy, and maintain.
+      </p>
+
+      <h2>Build Around User Workflows</h2>
+
+      <p>
+        A useful ML system should fit the way people actually work. For example,
+        a credit scoring system may need batch uploads, single prediction forms,
+        explanations, downloadable outputs, and clear decision support.
+      </p>
+
+      <p>
+        These product details matter. A technically impressive model is not very
+        useful if users cannot understand its output or fit it into their
+        workflow.
+      </p>
+
+      <h2>Explainability Builds Trust</h2>
+
+      <p>
+        In many real-world settings, prediction alone is not enough. Users want
+        to know why a model made a decision.
+      </p>
+
+      <p>
+        Explainability tools such as feature importance, SHAP values, and clear
+        summaries can help users interpret predictions. This is especially
+        important in domains like credit scoring, fraud detection, healthcare,
+        and operational decision-making.
+      </p>
+
+      <h2>Deployment Should Be Simple First</h2>
+
+      <p>
+        Not every ML project needs complex infrastructure immediately. Sometimes
+        a well-structured Streamlit app, a Docker container, or a simple API is
+        enough to make a project usable.
+      </p>
+
+      <p>
+        The goal is not to overcomplicate deployment. The goal is to create a
+        reliable path from model development to real usage.
+      </p>
+
+      <h2>Monitoring Is Part of the System</h2>
+
+      <p>
+        ML systems change over time because the world changes. Data
+        distributions shift, user behavior changes, upstream systems evolve, and
+        model performance can degrade.
+      </p>
+
+      <p>
+        Monitoring helps detect these changes. Practical systems should track
+        prediction behavior, input quality, errors, latency, and possible drift.
+        Without monitoring, model failure can remain invisible for too long.
+      </p>
+
+      <h2>Conclusion</h2>
+
+      <p>
+        Notebooks are an excellent starting point, but practical machine learning
+        requires more than experimentation.
+      </p>
+
+      <p>
+        Real ML systems depend on reproducible workflows, reliable data,
+        separated responsibilities, explainability, deployment, and monitoring.
+        The future belongs not only to people who can train models, but to those
+        who can build useful systems around them.
+      </p>
+    </article>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Sticky quick navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#open-source">OSS</a>
+    <a href="./index.html">Articles</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+
+  <script src="../script.js"></script>
+</body>
+</html>

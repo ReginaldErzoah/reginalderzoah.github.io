@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Why Data Quality Matters Before Machine Learning | Reginald Erzoah</title>
+
+  <meta
+    name="description"
+    content="A practical article on why data quality is foundational to reliable machine learning systems and modern ML workflows."
+  />
+
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body class="articles-page-body">
+  <main class="article-shell section-pad">
+    <a class="project-button article-back-button" href="./index.html">
+      Articles
+
+      <span class="arrow-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+        </svg>
+      </span>
+    </a>
+
+    <article class="article-content reveal">
+      <div class="article-meta">
+        <span>Data Quality</span>
+        <span>·</span>
+        <span>7 min read</span>
+      </div>
+
+      <h1 class="article-title">
+        Why Data Quality Matters Before Machine Learning
+      </h1>
+
+      <p>
+        Machine learning systems are fundamentally dependent on data. No matter
+        how advanced a model becomes, poor-quality data will eventually limit its
+        performance.
+      </p>
+
+      <p>
+        Many teams focus heavily on model architectures, GPU infrastructure, and
+        hyperparameter tuning while underestimating the importance of data
+        quality. But in practice, many machine learning failures begin long
+        before training starts.
+      </p>
+
+      <p>
+        They begin in the data itself.
+      </p>
+
+      <h2>Models Learn From the Data They Receive</h2>
+
+      <p>
+        Machine learning models do not understand context in the way humans do.
+        They learn statistical relationships from the data provided to them.
+      </p>
+
+      <p>
+        If the data contains missing values, incorrect labels, duplicated
+        records, inconsistent formatting, or biased distributions, the model
+        learns from those issues as well.
+      </p>
+
+      <p>
+        This can produce systems that appear accurate during development but fail
+        when exposed to real-world data.
+      </p>
+
+      <h2>Bad Data Problems Are Often Invisible</h2>
+
+      <p>
+        One of the most dangerous aspects of poor-quality data is that the
+        problems are often subtle. Pipelines may continue running even when the
+        data becomes unreliable.
+      </p>
+
+      <p>
+        Small inconsistencies such as schema drift, hidden null values, duplicate
+        entities, or incorrect encodings can silently reduce model quality over
+        time.
+      </p>
+
+      <p>
+        Without proper validation, these issues may remain unnoticed until the
+        system begins producing unreliable predictions.
+      </p>
+
+      <h2>Better Data Often Beats Better Models</h2>
+
+      <p>
+        In many practical ML systems, improving data quality creates larger gains
+        than improving algorithms.
+      </p>
+
+      <p>
+        Cleaner labels, balanced datasets, reduced leakage, stronger validation,
+        and better preprocessing can dramatically improve model performance even
+        when using relatively simple algorithms.
+      </p>
+
+      <p>
+        A well-curated dataset with a modest model often outperforms a powerful
+        model trained on unreliable data.
+      </p>
+
+      <h2>Data Drift Is a Continuous Problem</h2>
+
+      <p>
+        Data quality is not static. As systems evolve, upstream data sources
+        change, user behavior shifts, schemas evolve, and distributions move over
+        time.
+      </p>
+
+      <p>
+        This introduces problems such as feature drift, training-serving skew,
+        and distribution changes that slowly reduce model reliability.
+      </p>
+
+      <p>
+        Strong ML systems continuously validate and monitor their data rather
+        than assuming datasets will remain stable forever.
+      </p>
+
+      <h2>Data Quality Is Also About Trust</h2>
+
+      <p>
+        Organizations need confidence in their data systems. Poor-quality data
+        affects not only models, but analytics, dashboards, reporting, and
+        operational decision-making.
+      </p>
+
+      <p>
+        When teams cannot trust datasets, development slows down. Engineers spend
+        more time debugging pipelines, validating assumptions, and investigating
+        inconsistencies.
+      </p>
+
+      <p>
+        Reliable data systems create confidence across the organization.
+      </p>
+
+      <h2>Practical Validation Techniques</h2>
+
+      <p>
+        Modern ML systems increasingly include automated data validation before
+        training and inference.
+      </p>
+
+      <p>
+        Common validation workflows include:
+      </p>
+
+      <ul>
+        <li>Schema validation</li>
+        <li>Null analysis</li>
+        <li>Duplicate detection</li>
+        <li>Distribution comparison</li>
+        <li>Outlier detection</li>
+        <li>Statistical profiling</li>
+        <li>Type consistency checks</li>
+      </ul>
+
+      <p>
+        These checks help detect problems early before unreliable data reaches
+        production systems.
+      </p>
+
+      <h2>Data Quality Is Becoming Infrastructure</h2>
+
+      <p>
+        Historically, data quality was often treated as manual cleanup work.
+        Modern systems increasingly treat it as engineering infrastructure.
+      </p>
+
+      <p>
+        This shift has created growing demand for profiling tools, observability
+        systems, validation frameworks, and dataset intelligence platforms.
+      </p>
+
+      <p>
+        As machine learning becomes more integrated into critical workflows,
+        reliable data systems become increasingly important.
+      </p>
+
+      <h2>Machine Learning Depends on Reliable Foundations</h2>
+
+      <p>
+        High-performing ML systems are rarely built on unreliable datasets.
+        Strong systems depend on trustworthy pipelines, validated datasets,
+        reproducible workflows, and continuous monitoring.
+      </p>
+
+      <p>
+        This is why mature ML organizations invest heavily in data engineering
+        and quality infrastructure long before optimizing models.
+      </p>
+
+      <h2>Conclusion</h2>
+
+      <p>
+        Data quality is not optional infrastructure for machine learning. It is
+        foundational.
+      </p>
+
+      <p>
+        Before models can become reliable, datasets must become reliable first.
+        Better machine learning systems begin with better data systems:
+        trustworthy pipelines, validation workflows, observability, and clean
+        datasets.
+      </p>
+
+      <p>
+        Machine learning ultimately reflects the quality of the information it
+        learns from.
+      </p>
+    </article>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Sticky quick navigation">
+    <a href="../index.html#projects">Projects</a>
+    <a href="../index.html#open-source">OSS</a>
+    <a href="./index.html">Articles</a>
+    <a href="../index.html#contact">Contact</a>
+  </nav>
+
+  <script src="../script.js"></script>
+</body>
+</html>
