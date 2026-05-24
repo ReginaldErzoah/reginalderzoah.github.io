@@ -51,14 +51,41 @@ if (themeToggle) {
 ================================ */
 
 viewToggleButtons.forEach((button) => {
+  const targetLayoutId = button.dataset.target;
+  const selectedView = button.dataset.view;
+
+  /* Restore saved layout */
+
+  const savedView = localStorage.getItem(targetLayoutId);
+
+  if (savedView && selectedView === savedView) {
+    button.classList.add("active");
+
+    const targetLayout = document.getElementById(targetLayoutId);
+
+    if (targetLayout) {
+      targetLayout.classList.remove(
+        "list-view",
+        "grid-view",
+        "presentation-view"
+      );
+
+      targetLayout.classList.add(`${savedView}-view`);
+    }
+  }
+
   button.addEventListener("click", () => {
-    const selectedView = button.dataset.view;
-    const targetLayoutId = button.dataset.target;
     const targetLayout = document.getElementById(targetLayoutId);
 
     if (!targetLayout) return;
 
-    targetLayout.style.opacity = "0";
+    /* Save selected layout */
+
+    localStorage.setItem(targetLayoutId, selectedView);
+
+    /* Smooth transition */
+
+    targetLayout.classList.add("is-switching");
 
     setTimeout(() => {
       targetLayout.classList.remove(
@@ -69,8 +96,12 @@ viewToggleButtons.forEach((button) => {
 
       targetLayout.classList.add(`${selectedView}-view`);
 
-      targetLayout.style.opacity = "1";
-    }, 160);
+      requestAnimationFrame(() => {
+        targetLayout.classList.remove("is-switching");
+      });
+    }, 180);
+
+    /* Toggle active state */
 
     const parentToggle = button.closest(".layout-toggle");
 
@@ -160,12 +191,31 @@ if (contactScene) {
 let ticking = false;
 
 function handleScrollEffects() {
+
   const scrollY = window.scrollY;
+
+  /* Dynamic navbar blur */
+
+/* Dynamic navbar blur + hide */
+
+const topShell = document.querySelector(".top-shell");
+const topNav = document.querySelector(".top-nav");
+
+if (topNav) {
+  topNav.classList.toggle("nav-scrolled", scrollY > 24);
+}
+
+if (topShell) {
+  topShell.classList.toggle("nav-hidden", scrollY > 180);
+}
 
   if (bottomNav) {
     const isArticlePage = document.body.classList.contains("articles-page-body");
 
-    bottomNav.classList.toggle("is-visible", isArticlePage || scrollY > 420);
+    bottomNav.classList.toggle(
+      "is-visible",
+      isArticlePage || scrollY > 420
+    );
   }
 
   if (portrait) {
@@ -207,6 +257,94 @@ const footerYear = document.getElementById("footerYear");
 if (footerYear) {
   footerYear.textContent = new Date().getFullYear();
 }
+
+/* ================================
+   GITHUB REPOSITORY META
+================================ */
+
+const repoMetaBlocks = document.querySelectorAll(".repo-meta");
+
+repoMetaBlocks.forEach(async (block) => {
+  const repo = block.dataset.repo;
+
+  if (!repo) return;
+
+  try {
+    /* Main repo info */
+
+    const repoResponse = await fetch(
+      `https://api.github.com/repos/${repo}`
+    );
+
+    const repoData = await repoResponse.json();
+
+    /* Latest release */
+
+    let releaseName = "No release";
+
+    try {
+      const releaseResponse = await fetch(
+        `https://api.github.com/repos/${repo}/releases/latest`
+      );
+
+      if (releaseResponse.ok) {
+        const releaseData = await releaseResponse.json();
+
+        releaseName =
+          releaseData.tag_name ||
+          releaseData.name ||
+          "Latest";
+      }
+    } catch (error) {}
+
+    /* Last updated */
+
+    const updatedDate = new Date(repoData.updated_at);
+
+    const relativeUpdated = updatedDate.toLocaleDateString(
+      undefined,
+      {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      }
+    );
+
+    /* Elements */
+
+    const starsElement =
+      block.querySelector(".repo-stars");
+
+    const releaseElement =
+      block.querySelector(".repo-release");
+
+    const updatedElement =
+      block.querySelector(".repo-updated");
+
+    /* Inject */
+
+    if (starsElement) {
+      starsElement.textContent =
+        `★ ${repoData.stargazers_count ?? 0}`;
+    }
+
+    if (releaseElement) {
+      releaseElement.textContent =
+        `${releaseName}`;
+    }
+
+    if (updatedElement) {
+      updatedElement.textContent =
+        `Updated ${relativeUpdated}`;
+    }
+
+  } catch (error) {
+    console.error(
+      "Failed to fetch GitHub repository info:",
+      error
+    );
+  }
+});
 
 window.addEventListener("scroll", () => {
   if (!ticking) {
