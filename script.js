@@ -259,7 +259,7 @@ if (footerYear) {
 }
 
 /* ================================
-   GITHUB REPOSITORY META
+   GITHUB LATEST RELEASE META
 ================================ */
 
 const repoMetaBlocks = document.querySelectorAll(".repo-meta");
@@ -270,79 +270,50 @@ repoMetaBlocks.forEach(async (block) => {
   if (!repo) return;
 
   try {
-    /* Main repo info */
-
-    const repoResponse = await fetch(
-      `https://api.github.com/repos/${repo}`
+    const releaseResponse = await fetch(
+      `https://api.github.com/repos/${repo}/releases/latest`
     );
 
-    const repoData = await repoResponse.json();
-
-    /* Latest release */
-
-    let releaseName = "No release";
-
-    try {
-      const releaseResponse = await fetch(
-        `https://api.github.com/repos/${repo}/releases/latest`
-      );
-
-      if (releaseResponse.ok) {
-        const releaseData = await releaseResponse.json();
-
-        releaseName =
-          releaseData.tag_name ||
-          releaseData.name ||
-          "Latest";
-      }
-    } catch (error) {}
-
-    /* Last updated */
-
-    const updatedDate = new Date(repoData.updated_at);
-
-    const relativeUpdated = updatedDate.toLocaleDateString(
-      undefined,
-      {
-        month: "short",
-        day: "numeric",
-        year: "numeric",
-      }
-    );
-
-    /* Elements */
-
-    const starsElement =
-      block.querySelector(".repo-stars");
-
-    const releaseElement =
-      block.querySelector(".repo-release");
-
-    const updatedElement =
-      block.querySelector(".repo-updated");
-
-    /* Inject */
-
-    if (starsElement) {
-      starsElement.textContent =
-        `★ ${repoData.stargazers_count ?? 0}`;
+    if (!releaseResponse.ok) {
+      throw new Error("No latest release found");
     }
 
+    const releaseData = await releaseResponse.json();
+
+    const version =
+      releaseData.tag_name ||
+      releaseData.name ||
+      "No release";
+
+    const releaseDate = releaseData.published_at
+      ? new Date(releaseData.published_at).toLocaleDateString(undefined, {
+          month: "short",
+          day: "numeric",
+          year: "numeric",
+        })
+      : "Unknown date";
+
+    const releaseElement = block.querySelector(".repo-release");
+    const updatedElement = block.querySelector(".repo-updated");
+
     if (releaseElement) {
-      releaseElement.textContent =
-        `${releaseName}`;
+      releaseElement.textContent = version;
     }
 
     if (updatedElement) {
-      updatedElement.textContent =
-        `Updated ${relativeUpdated}`;
+      updatedElement.textContent = `Released ${releaseDate}`;
+    }
+  } catch (error) {
+    const releaseElement = block.querySelector(".repo-release");
+    const updatedElement = block.querySelector(".repo-updated");
+
+    if (releaseElement) {
+      releaseElement.textContent = "No release";
     }
 
-  } catch (error) {
-    console.error(
-      "Failed to fetch GitHub repository info:",
-      error
-    );
+    if (updatedElement) {
+      updatedElement.textContent = "Release unavailable";
+    }
   }
 });
 
