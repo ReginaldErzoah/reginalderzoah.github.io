@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Reginald Erzoah | ML Engineer & Open Source Data Tooling</title>
+
+  <meta
+    name="description"
+    content="Reginald Erzoah — Machine Learning Engineer and data professional building ML systems and open-source tools for modern data workflows."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="articles-page-body">
+  <header class="top-shell" id="top">
+    <nav class="top-nav" aria-label="Primary navigation">
+      <a class="logo" href="#top" aria-label="Reginald Erzoah homepage">
+        <span>RE</span>
+        <i></i>
+      </a>
+
+      <div class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#open-source">Open Source</a>
+        <a href="articles/index.html">Articles</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button
+        class="theme-toggle"
+        id="themeToggle"
+        aria-label="Toggle dark and light theme"
+      >
+        <span id="themeIcon">☾</span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-pad">
+      <div class="portrait-wrap reveal">
+        <img
+          src="images/profile.png"
+          alt="Portrait of Reginald Erzoah"
+          class="portrait"
+        />
+      </div>
+
+      <div class="hero-copy reveal">
+        <p>
+          I’m Reginald Erzoah, a Machine Learning Engineer and data professional
+          building ML systems, open-source tools, and developer-focused solutions
+          for modern data ecosystems.
+        </p>
+
+        <p>
+          I work across machine learning, analytics, data tooling, and data
+          workflows, with a focus on practical systems that help teams better
+          understand, validate, and work with data.
+        </p>
+
+        <p>
+          I’m actively building and maintaining open-source projects like Dift
+          and Aniwa, focused on solving real-world data quality, profiling, and
+          dataset comparison challenges for data professionals.
+        </p>
+
+        <p>
+          My work combines machine learning engineering, data science, and
+          product-minded thinking to create tools that are technically reliable,
+          accessible, and useful in real-world environments.
+        </p>
+
+        <p>
+          I’m especially interested in ML infrastructure, MLOps, intelligent data
+          systems, and open-source collaboration that improves how data and ML
+          systems are built and maintained.
+        </p>
+
+        <div class="social-row" aria-label="Social links">
+          <a href="https://github.com/ReginaldErzoah" target="_blank" rel="noreferrer">
+            Github
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/reginald-erzoah" target="_blank" rel="noreferrer">
+            Linkedin
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+
+          <a href="mailto:reginalderzoah10@gmail.com">
+            Email
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-pad section-block projects-section" id="projects">
+      <div class="projects-header reveal">
+        <div>
+          <h2>Projects</h2>
+          <p>Featured Data Projects</p>
+        </div>
+
+        <div class="layout-toggle" aria-label="Change project layout">
+          <button class="view-toggle-btn active" type="button" data-target="projectsLayout" data-view="list" aria-label="Show projects as list" title="List view">
+            <span>☰</span>
+          </button>
+
+          <button
+  class="view-toggle-btn"
+  type="button"
+  data-target="projectsLayout"
+  data-view="grid"
+  aria-label="Show projects as grid"
+  title="Grid view"
+>
+  <span class="grid-icon" aria-hidden="true">
+    <svg viewBox="0 0 24 24">
+      <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
+      <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
+      <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
+      <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
+    </svg>
+  </span>
+</button>
+
+          <button class="view-toggle-btn" type="button" data-target="projectsLayout" data-view="presentation" aria-label="Show projects as presentation" title="Presentation view">
+            <span class="monitor-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="5" width="16" height="11" rx="2" ry="2"></rect>
+                <path d="M9 20h6"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="showcase-layout list-view" id="projectsLayout">
+        <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <img src="images/credit-scoring.png" alt="Credit scoring ML system preview" />
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category">[ ML SYSTEM ]</p>
+            <h3>Credit Scoring & Loan Decision System</h3>
+
+            <p>
+              End-to-end ML system with an interactive Streamlit interface for credit risk prediction, model
+              explainability, and interactive loan decision workflows.
+            </p>
+
+            <div class="showcase-stack">
+              <span>Python</span>
+              <span>Scikit-Learn</span>
+              <span>XGBoost</span>
+              <span>Streamlit</span>
+            </div>
+
+            <a class="project-button" href="https://github.com/ReginaldErzoah/Credit-Scoring-Loan-Decision-System" target="_blank" rel="noreferrer">
+              View Project
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+
+  <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <img src="images/segmenai.png" alt="SegmenAI app preview" />
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category">[ ML APPLICATION ]</p>
+            <h3>SegmenAI</h3>
+
+            <p>
+              Machine learning application with an interactive Streamlit dashboard for customer segmentation and insights. 
+              
+            </p>
+
+            <div class="showcase-stack">
+              <span>Python</span>
+              <span>XGBoost</span>
+              <span>Random Forest</span>
+              <span>Streamlit</span>
+            </div>
+
+            <a class="project-button" href="https://github.com/ReginaldErzoah/SegmenAI" target="_blank" rel="noreferrer">
+              View Project
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <img src="images/credit-card.png" alt="Credit card fraud detection app preview" />
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category">[ ML APPLICATION ]</p>
+            <h3>Credit Card Fraud Detection App</h3>
+
+            <p>
+              Machine learning application with an interactive Streamlit dashboard for detecting credit card fraud using machine learning models.
+            </p>
+
+            <div class="showcase-stack">
+              <span>Python</span>
+              <span>XGBoost</span>
+              <span>Random Forest</span>
+              <span>Streamlit</span>
+            </div>
+
+            <a class="project-button" href="https://github.com/ReginaldErzoah/Credit-Card-Fraud-Detection-App" target="_blank" rel="noreferrer">
+              View Project
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section-pad section-block projects-section open-source-section" id="open-source">
+      <div class="projects-header reveal">
+        <div>
+          <h2>Open Source</h2>
+          <p>Featured Side Quests</p>
+        </div>
+
+        <div class="layout-toggle" aria-label="Change open-source layout">
+          <button class="view-toggle-btn active" type="button" data-target="openSourceLayout" data-view="list" aria-label="Show open-source projects as list" title="List view">
+            <span>☰</span>
+          </button>
+
+          <button class="view-toggle-btn" type="button" data-target="openSourceLayout" data-view="grid" aria-label="Show open-source projects as grid" title="Grid view">
+            <span class="grid-icon" aria-hidden="true">
+  <svg viewBox="0 0 24 24">
+    <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
+    <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
+    <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
+    <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
+  </svg>
+</span>
+          </button>
+
+          <button class="view-toggle-btn" type="button" data-target="openSourceLayout" data-view="presentation" aria-label="Show open-source projects as presentation" title="Presentation view">
+            <span class="monitor-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="4" y="5" width="16" height="11" rx="2" ry="2"></rect>
+                <path d="M9 20h6"></path>
+                <path d="M12 16v4"></path>
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="showcase-layout list-view" id="openSourceLayout">
+        <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <img src="images/dift-icon.png" alt="Dift open-source dataset comparison tool preview" />
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category"></p>
+            <h3>Dift</h3>
+
+            <p>
+              Open-source Python CLI tool for comparing datasets and identifying
+              schema, row-level, and data quality differences.
+            </p>
+
+            <a class="project-button" href="https://github.com/ReginaldErzoah/Dift" target="_blank" rel="noreferrer">
+              View Repo
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+
+        <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <img src="images/aniwa-icon.png" alt="Aniwa open-source data profiling tool preview" />
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category"></p>
+            <h3>Aniwa</h3>
+
+            <p>
+              Universal data profiling and intelligence tool for inspecting
+              datasets, diagnosing quality issues, and supporting modern data
+              workflows.
+            </p>
+
+            <a class="project-button" href="https://github.com/ReginaldErzoah/Aniwa" target="_blank" rel="noreferrer">
+              View Repo
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section-pad section-block notes-section" id="notes">
+      <div class="notes-header reveal">
+        <div>
+          <h2>Articles</h2>
+          <p>Featured Insights</p>
+        </div>
+
+        <a class="project-button notes-view-all" href="articles/index.html">
+          View All
+          <span class="arrow-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+            </svg>
+          </span>
+        </a>
+      </div>
+
+      <div class="notes-feature-list reveal">
+        <article class="featured-note">
+          <div class="featured-note-copy">
+            <h3>Scalable Architecture for Open Source CLI Tools</h3>
+            <p>
+              Lessons from designing Python command-line tools that stay modular,
+              testable, and maintainable as they scale.
+            </p>
+          </div>
+
+          <a class="project-button article-button" href="articles/scalable-architecture-open-source-cli-tools.html">
+            <span class="button-text">Read Article</span>
+            <span class="read-time">6 min read</span>
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+        </article>
+
+        <article class="featured-note">
+          <div class="featured-note-copy">
+            <h3>Building Practical ML Systems Beyond Notebooks</h3>
+            <p>
+              Moving from experimentation into real-world machine learning
+              systems, workflows, and production-ready tooling.
+            </p>
+          </div>
+
+          <a class="project-button article-button" href="articles/building-practical-ml-systems-beyond-notebooks.html">
+            <span class="button-text">Read Article</span>
+            <span class="read-time">8 min read</span>
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+        </article>
+
+        <article class="featured-note">
+          <div class="featured-note-copy">
+            <h3>Why Data Quality Matters Before Machine Learning</h3>
+            <p>
+              A practical look at profiling, validation, and trustworthy
+              datasets before model training begins.
+            </p>
+          </div>
+
+          <a class="project-button article-button" href="articles/why-data-quality-matters-before-machine-learning.html">
+            <span class="button-text">Read Article</span>
+            <span class="read-time">7 min read</span>
+            <span class="arrow-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+              </svg>
+            </span>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer-contact-section" id="contact">
+  <div class="footer-visual-wrap reveal">
+
+    <!-- DARK THEME -->
+    <img
+      src="images/footer-dark.png"
+      alt="Developer workspace dark theme"
+      class="footer-visual footer-dark-image"
+    />
+
+    <!-- LIGHT THEME -->
+    <img
+      src="images/footer-light.png"
+      alt="Developer workspace light theme"
+      class="footer-visual footer-light-image"
+    />
+
+    <!-- OVERLAY CONTENT -->
+    <div class="footer-overlay-card">
+      <h2>Let’s Connect & Collaborate</h2>
+
+      <div class="footer-social-links">
+
+  <a
+    href="https://github.com/ReginaldErzoah"
+    target="_blank"
+    rel="noreferrer"
+    class="footer-social-btn"
+  >
+    Github
+
+    <span class="arrow-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+      </svg>
+    </span>
+  </a>
+
+  <a
+    href="https://www.linkedin.com/in/reginald-erzoah"
+    target="_blank"
+    rel="noreferrer"
+    class="footer-social-btn"
+  >
+    Linkedin
+
+    <span class="arrow-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+      </svg>
+    </span>
+  </a>
+
+  <a
+    href="mailto:reginalderzoah10@gmail.com"
+    class="footer-social-btn"
+  >
+    Email
+
+    <span class="arrow-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24">
+        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+      </svg>
+    </span>
+  </a>
+
+</div>
+
+      <p class="footer-copyright">
+  © <span id="footerYear"></span> REGINALD ERZOAH
+</p>
+    </div>
+  </div>
+</section>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Sticky quick navigation">
+    <a href="#projects">Projects</a>
+    <a href="#open-source">OSS</a>
+    <a href="articles/index.html">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <script src="script.js"></script>
+</body>
+</html>
