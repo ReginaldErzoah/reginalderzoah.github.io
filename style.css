@@ -67,11 +67,15 @@ button {
 ================================ */
 
 .top-shell {
-  position: relative;
-  top: auto;
-  z-index: 50;
-  padding: 48px 30px 0;
-  background: transparent;
+  transition:
+    transform 0.35s ease,
+    opacity 0.35s ease;
+}
+
+.top-shell.nav-hidden {
+  transform: translateY(-120%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .top-nav {
@@ -80,38 +84,57 @@ button {
   margin: 0 auto;
   border: 1px solid var(--line);
   border-radius: 999px;
+
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+
   padding: 0 10px;
-  backdrop-filter: blur(18px);
+
+  backdrop-filter: blur(80px);
   background: color-mix(in srgb, var(--bg) 86%, transparent);
+
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.top-nav.nav-scrolled {
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(26px);
+  border-color: var(--line);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
 }
 
 .logo {
   width: 38px;
   height: 38px;
+
   border-radius: 50%;
-  background: var(--button);
-  color: var(--button-text);
-  display: inline-grid;
-  place-items: center;
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: -0.08em;
-  position: relative;
+
+  overflow: hidden;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
 }
 
-.logo i {
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: #ef4444;
-  position: absolute;
-  right: 9px;
-  bottom: 12px;
+.logo:hover {
+  transform: scale(1.05);
 }
 
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .nav-links {
   display: flex;
   align-items: center;
@@ -614,6 +637,52 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   transform: scale(1.045);
 }
 
+/* ================================
+   PROJECT CARD INTERACTION
+================================ */
+
+.showcase-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.showcase-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: radial-gradient(
+    420px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.06),
+    transparent 42%
+  );
+  transition: opacity 0.25s ease;
+}
+
+.showcase-item:hover::before {
+  opacity: 1;
+}
+
+.showcase-media {
+  position: relative;
+}
+
+
+
+/* Smooth layout switch */
+
+.showcase-layout.is-switching {
+  opacity: 0;
+  transform: translateY(10px) scale(0.985);
+}
+
+.showcase-layout {
+  transition:
+    opacity 0.28s ease,
+    transform 0.28s ease;
+}
+
 .showcase-content {
   max-width: 520px;
   display: flex;
@@ -657,6 +726,50 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   color: var(--muted);
   font-size: 14px;
   margin: 0;
+}
+
+/* ================================
+   REPOSITORY META
+================================ */
+
+.repo-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.repo-meta span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 26px;
+
+  padding: 0 12px;
+
+  border-radius: 999px;
+
+  background: var(--surface-2);
+
+  color: var(--muted);
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  border: 1px solid var(--line);
+
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.showcase-item:hover .repo-meta span {
+  border-color: rgba(37, 99, 235, 0.16);
 }
 
 .project-button {
