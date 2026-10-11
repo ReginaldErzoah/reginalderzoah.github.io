@@ -1,3 +1,4 @@
+
 /* ================================
    DESIGN TOKENS
 ================================ */
@@ -111,9 +112,7 @@ button {
 .logo {
   width: 38px;
   height: 38px;
-
   border-radius: 50%;
-
   overflow: hidden;
 
   display: inline-flex;
@@ -135,6 +134,7 @@ button {
   object-fit: cover;
   display: block;
 }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -453,14 +453,13 @@ button {
 .view-toggle-btn svg rect,
 .view-toggle-btn svg circle {
   stroke-width: 1.8;
-
   transition:
     stroke 0.25s ease,
     fill 0.25s ease;
 }
 
 /* DARK THEME */
-/* white icons with black outline */
+/* White icons with black outline */
 
 html[data-theme="dark"] .view-toggle-btn svg path,
 html[data-theme="dark"] .view-toggle-btn svg rect,
@@ -470,7 +469,7 @@ html[data-theme="dark"] .view-toggle-btn svg circle {
 }
 
 /* LIGHT THEME */
-/* black icons with white outline */
+/* Black icons with white outline */
 
 html[data-theme="light"] .view-toggle-btn svg path,
 html[data-theme="light"] .view-toggle-btn svg rect,
@@ -506,7 +505,6 @@ html[data-theme="light"] .view-toggle-btn svg circle {
 .grid-icon rect {
   stroke-width: 1.8;
 }
-
 
 .view-toggle-btn:hover,
 .view-toggle-btn.active {
@@ -551,8 +549,6 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   padding-left: 0;
   max-width: 560px;
 }
-
-
 
 .showcase-layout.grid-view {
   display: grid;
@@ -624,19 +620,6 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   background: var(--project-media);
 }
 
-.showcase-media img {
-  width: 100%;
-  height: 100%;
-  min-height: inherit;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-.showcase-item:hover .showcase-media img {
-  transform: scale(1.045);
-}
-
 /* ================================
    PROJECT CARD INTERACTION
 ================================ */
@@ -668,7 +651,18 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   position: relative;
 }
 
+.showcase-media img {
+  width: 100%;
+  height: 100%;
+  min-height: inherit;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+}
 
+.showcase-item:hover .showcase-media img {
+  transform: scale(1.045);
+}
 
 /* Smooth layout switch */
 
@@ -736,7 +730,6 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -745,23 +738,15 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   min-height: 26px;
-
   padding: 0 12px;
-
   border-radius: 999px;
-
   background: var(--surface-2);
-
   color: var(--muted);
-
   font-size: 12px;
   font-weight: 600;
   line-height: 1;
-
   border: 1px solid var(--line);
-
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -777,6 +762,38 @@ html[data-theme="light"] .view-toggle-btn svg circle {
   padding: 0 14px;
   font-size: 15px;
   align-self: flex-start;
+}
+
+/* ================================
+   INSIGHT API PROJECT ACTION BUTTONS
+================================ */
+
+/*
+  The wrapper keeps View Project and Live Dashboard
+  on the same row whenever there is sufficient space.
+*/
+
+.project-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  margin-top: 2px;
+}
+
+.project-actions > .project-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  align-self: auto;
+  width: auto;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
 }
 
 /* ================================
@@ -948,9 +965,7 @@ html[data-theme="light"] .footer-light-image {
   display: block;
 }
 
-/* Footer text overlay.
-   The footer images already contain the solid text area,
-   so this layer must stay transparent. */
+/* Footer text overlay */
 
 .footer-overlay-card {
   position: absolute;
@@ -1004,24 +1019,17 @@ html[data-theme="light"] .footer-overlay-card h2 {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-
   border-radius: 999px;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   min-height: 30px;
   padding: 0 14px;
-
   font-size: 15px;
   font-weight: 600;
-
   text-decoration: none;
-
   will-change: transform;
-
   transition:
     transform 0.22s ease,
     color 0.25s ease,
@@ -1113,16 +1121,11 @@ html[data-theme="light"] .footer-social-links a {
   margin: 0;
   padding: 0;
   border: 0;
-
   font-size: 13px;
   line-height: 1.5;
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
-
   font-weight: 400;
-
   font-family: inherit;
 }
 
@@ -1179,24 +1182,16 @@ html[data-theme="light"] .footer-copyright {
 .bottom-top-link {
   width: 38px;
   height: 38px;
-
   min-width: 38px;
   min-height: 38px;
-
   padding: 0 !important;
-
   border-radius: 50%;
-
   overflow: hidden;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   flex-shrink: 0;
-
   background: transparent !important;
-
   transition:
     transform 0.22s ease,
     opacity 0.22s ease;
@@ -1209,9 +1204,7 @@ html[data-theme="light"] .footer-copyright {
 .bottom-top-link img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   display: block;
 }
 
@@ -1611,6 +1604,16 @@ html[data-theme="light"] .footer-copyright {
 
   .project-button {
     min-height: 34px;
+  }
+
+  /* Keep Insight API buttons horizontal on mobile when they fit. */
+  .project-actions {
+    gap: 8px;
+  }
+
+  .project-actions > .project-button {
+    font-size: 14px;
+    padding: 0 12px;
   }
 
   .notes-header {
