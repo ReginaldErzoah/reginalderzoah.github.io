@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
@@ -12,16 +13,15 @@
   />
 
   <link rel="stylesheet" href="style.css" />
-<link rel="icon" type="image/png" href="images/favicon.ico" />
-
+  <link rel="icon" type="image/png" href="images/favicon.ico" />
 </head>
 
 <body class="articles-page-body">
   <header class="top-shell" id="top">
     <nav class="top-nav" aria-label="Primary navigation">
-     <a class="logo" href="#top" aria-label="Reginald Erzoah homepage">
-  <img src="images/favicon.png" alt="Reginald Erzoah logo" />
-</a>
+      <a class="logo" href="#top" aria-label="Reginald Erzoah homepage">
+        <img src="images/favicon.png" alt="Reginald Erzoah logo" />
+      </a>
 
       <div class="nav-links">
         <a href="#projects">Projects</a>
@@ -120,29 +120,43 @@
         </div>
 
         <div class="layout-toggle" aria-label="Change project layout">
-          <button class="view-toggle-btn active" type="button" data-target="projectsLayout" data-view="list" aria-label="Show projects as list" title="List view">
+          <button
+            class="view-toggle-btn active"
+            type="button"
+            data-target="projectsLayout"
+            data-view="list"
+            aria-label="Show projects as list"
+            title="List view"
+          >
             <span>☰</span>
           </button>
 
           <button
-  class="view-toggle-btn"
-  type="button"
-  data-target="projectsLayout"
-  data-view="grid"
-  aria-label="Show projects as grid"
-  title="Grid view"
->
-  <span class="grid-icon" aria-hidden="true">
-    <svg viewBox="0 0 24 24">
-      <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
-      <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
-      <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
-      <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
-    </svg>
-  </span>
-</button>
+            class="view-toggle-btn"
+            type="button"
+            data-target="projectsLayout"
+            data-view="grid"
+            aria-label="Show projects as grid"
+            title="Grid view"
+          >
+            <span class="grid-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
+              </svg>
+            </span>
+          </button>
 
-          <button class="view-toggle-btn" type="button" data-target="projectsLayout" data-view="presentation" aria-label="Show projects as presentation" title="Presentation view">
+          <button
+            class="view-toggle-btn"
+            type="button"
+            data-target="projectsLayout"
+            data-view="presentation"
+            aria-label="Show projects as presentation"
+            title="Presentation view"
+          >
             <span class="monitor-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <rect x="4" y="5" width="16" height="11" rx="2" ry="2"></rect>
@@ -155,6 +169,88 @@
       </div>
 
       <div class="showcase-layout list-view" id="projectsLayout">
+
+        
+        <!-- INSIGHT API -->
+        <article class="showcase-item reveal">
+          <div class="showcase-media">
+            <a
+              href="https://insight-dashboard-854268296659.africa-south1.run.app"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open the live Insight API dashboard"
+            >
+              <img
+                src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Finsight-dashboard-854268296659.africa-south1.run.app?w=1200"
+                alt="Screenshot preview of the Insight API sales analytics dashboard"
+                loading="lazy"
+                referrerpolicy="no-referrer"
+              />
+            </a>
+          </div>
+
+          <div class="showcase-content">
+            <p class="showcase-category">[DATA ENGINEERING &amp; DATAOPS]</p>
+
+            <h3>Insight API - Containerised Sales Analytics Platform</h3>
+
+            <p>
+              An end-to-end sales analytics application that transforms raw CSV data
+              into validated Parquet datasets, exposes business metrics through a
+              FastAPI REST API, and presents insights through an interactive Streamlit
+              dashboard.
+            </p>
+
+            <p>
+              Docker, automated testing, GitHub Actions CI/CD, and Google
+              Cloud Run support a repeatable path from development to deployment.
+            </p>
+
+            <div class="showcase-stack">
+              <span>Python</span>
+              <span>FastAPI</span>
+              <span>Streamlit</span>
+              <span>Pandas</span>
+              <span>Pytest</span>
+              <span>Docker</span>
+              <span>GitHub Actions</span>
+              <span>Google Cloud Run</span>
+            </div>
+
+            <div class="project-actions">
+              <a
+                class="project-button"
+                href="https://github.com/ReginaldErzoah/insight-api"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View Project
+                <span class="arrow-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                  </svg>
+                </span>
+              </a>
+
+              <a
+                class="project-button"
+                href="https://insight-dashboard-854268296659.africa-south1.run.app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Live Dashboard
+                <span class="arrow-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+
+        <!-- SUPPORTOPS INTELLIGENCE -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/supportops-intelligence.png" alt="SupportOps Intelligence preview" />
@@ -165,8 +261,9 @@
             <h3>SupportOps Intelligence Analytics Platform</h3>
 
             <p>
-              Customer support intelligence platform that transforms operational 
-              support data into actionable insights through KPI tracking, performance analysis, and interactive dashboards.
+              Customer support intelligence platform that transforms operational
+              support data into actionable insights through KPI tracking, performance
+              analysis, and interactive dashboards.
             </p>
 
             <div class="showcase-stack">
@@ -188,7 +285,8 @@
             </a>
           </div>
         </article>
-        
+
+        <!-- CUSTOMER SUPPORT ANALYTICS -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/customer-support.png" alt="Customer Support preview" />
@@ -199,8 +297,9 @@
             <h3>Customer Support Analytics Platform</h3>
 
             <p>
-              Support analytics data platform that enables reliable KPI reporting through automated 
-              transformations, dimensional modeling, data quality testing, and interactive dashboards.
+              Support analytics data platform that enables reliable KPI reporting
+              through automated transformations, dimensional modeling, data quality
+              testing, and interactive dashboards.
             </p>
 
             <div class="showcase-stack">
@@ -223,18 +322,20 @@
           </div>
         </article>
 
+        <!-- FINANCE PLANNING & ANALYTICS -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
-            <img src="images/financial-analysis.png" alt="Customer Support preview" />
+            <img src="images/financial-analysis.png" alt="Finance Planning and Analytics report preview" />
           </div>
 
           <div class="showcase-content">
             <p class="showcase-category">[ANALYTICS SYSTEM]</p>
-            <h3>Finance Planning & Analytics Report</h3>
+            <h3>Finance Planning &amp; Analytics Report</h3>
 
             <p>
-              Business intelligence solution comparing departmental budgets against actual spending. 
-              This highlighted budget variances and supported strategic financial planning.
+              Business intelligence solution comparing departmental budgets against
+              actual spending. This highlighted budget variances and supported
+              strategic financial planning.
             </p>
 
             <div class="showcase-stack">
@@ -254,6 +355,7 @@
           </div>
         </article>
 
+        <!-- CREDIT SCORING -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/credit-scoring.png" alt="Credit scoring ML system preview" />
@@ -261,11 +363,12 @@
 
           <div class="showcase-content">
             <p class="showcase-category">[ML SYSTEM]</p>
-            <h3>Credit Scoring & Loan Decision System</h3>
+            <h3>Credit Scoring &amp; Loan Decision System</h3>
 
             <p>
-              Credit scoring system that supports risk prediction, 
-              model interpretability, and interactive loan decision analysis through a production-style Streamlit interface.
+              Credit scoring system that supports risk prediction, model
+              interpretability, and interactive loan decision analysis through a
+              production-style Streamlit interface.
             </p>
 
             <div class="showcase-stack">
@@ -286,6 +389,7 @@
           </div>
         </article>
 
+        <!-- SEGMENAI -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/segmenai.png" alt="SegmenAI app preview" />
@@ -296,9 +400,9 @@
             <h3>SegmenAI</h3>
 
             <p>
-              An interactive customer intelligence system that applies clustering workflows and behavioral segmentation 
-              to help teams better understand customer patterns and business value distribution.
-              
+              An interactive customer intelligence system that applies clustering
+              workflows and behavioral segmentation to help teams better understand
+              customer patterns and business value distribution.
             </p>
 
             <div class="showcase-stack">
@@ -319,6 +423,7 @@
           </div>
         </article>
 
+        <!-- CREDIT CARD FRAUD DETECTION -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/credit-card.png" alt="Credit card fraud detection app preview" />
@@ -329,8 +434,9 @@
             <h3>Credit Card Fraud Detection App</h3>
 
             <p>
-              A fraud detection system that enables interactive transaction analysis, configurable prediction thresholds, 
-              and explainable machine learning inference for suspicious activity detection.
+              A fraud detection system that enables interactive transaction analysis,
+              configurable prediction thresholds, and explainable machine learning
+              inference for suspicious activity detection.
             </p>
 
             <div class="showcase-stack">
@@ -351,6 +457,7 @@
           </div>
         </article>
 
+        <!-- MOFLOW -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/moflow-icon.png" alt="MoFlow preview" />
@@ -361,8 +468,10 @@
             <h3>MoFlow</h3>
 
             <p>
-              An end-to-end Business Analysis case study for a mobile-first recurring bill payment platform, 
-              demonstrating business analysis, requirements engineering, user research, UX design, process modelling, and Agile delivery.
+              An end-to-end Business Analysis case study for a mobile-first recurring
+              bill payment platform, demonstrating business analysis, requirements
+              engineering, user research, UX design, process modelling, and Agile
+              delivery.
             </p>
 
             <div class="showcase-stack">
@@ -385,6 +494,7 @@
       </div>
     </section>
 
+    <!-- OPEN SOURCE -->
     <section class="section-pad section-block projects-section open-source-section" id="open-source">
       <div class="projects-header reveal">
         <div>
@@ -393,22 +503,43 @@
         </div>
 
         <div class="layout-toggle" aria-label="Change open-source layout">
-          <button class="view-toggle-btn active" type="button" data-target="openSourceLayout" data-view="list" aria-label="Show open-source projects as list" title="List view">
+          <button
+            class="view-toggle-btn active"
+            type="button"
+            data-target="openSourceLayout"
+            data-view="list"
+            aria-label="Show open-source projects as list"
+            title="List view"
+          >
             <span>☰</span>
           </button>
 
-          <button class="view-toggle-btn" type="button" data-target="openSourceLayout" data-view="grid" aria-label="Show open-source projects as grid" title="Grid view">
+          <button
+            class="view-toggle-btn"
+            type="button"
+            data-target="openSourceLayout"
+            data-view="grid"
+            aria-label="Show open-source projects as grid"
+            title="Grid view"
+          >
             <span class="grid-icon" aria-hidden="true">
-  <svg viewBox="0 0 24 24">
-    <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
-    <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
-    <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
-    <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
-  </svg>
-</span>
+              <svg viewBox="0 0 24 24">
+                <rect x="3" y="3" width="7" height="7" rx="1.8"></rect>
+                <rect x="14" y="3" width="7" height="7" rx="1.8"></rect>
+                <rect x="3" y="14" width="7" height="7" rx="1.8"></rect>
+                <rect x="14" y="14" width="7" height="7" rx="1.8"></rect>
+              </svg>
+            </span>
           </button>
 
-          <button class="view-toggle-btn" type="button" data-target="openSourceLayout" data-view="presentation" aria-label="Show open-source projects as presentation" title="Presentation view">
+          <button
+            class="view-toggle-btn"
+            type="button"
+            data-target="openSourceLayout"
+            data-view="presentation"
+            aria-label="Show open-source projects as presentation"
+            title="Presentation view"
+          >
             <span class="monitor-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <rect x="4" y="5" width="16" height="11" rx="2" ry="2"></rect>
@@ -421,6 +552,8 @@
       </div>
 
       <div class="showcase-layout list-view" id="openSourceLayout">
+
+        <!-- DIFT -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/dift-icon.png" alt="Dift open-source dataset comparison tool preview" />
@@ -435,10 +568,10 @@
               schema, row-level, and data quality differences.
             </p>
 
-          <div class="repo-meta" data-repo="ReginaldErzoah/Dift">
-  <span class="repo-release">Version --</span>
-  <span class="repo-updated">Released --</span>
-</div>
+            <div class="repo-meta" data-repo="ReginaldErzoah/Dift">
+              <span class="repo-release">Version --</span>
+              <span class="repo-updated">Released --</span>
+            </div>
 
             <a class="project-button" href="https://github.com/ReginaldErzoah/Dift" target="_blank" rel="noreferrer">
               View Repo
@@ -451,6 +584,7 @@
           </div>
         </article>
 
+        <!-- ANIWA -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
             <img src="images/aniwa-icon.png" alt="Aniwa open-source data profiling tool preview" />
@@ -461,15 +595,14 @@
             <h3>Aniwa</h3>
 
             <p>
-              Universal data profiling and intelligence tool for inspecting
-              datasets, diagnosing quality issues, and supporting modern data
-              workflows.
+              Universal data profiling and intelligence tool for inspecting datasets,
+              diagnosing quality issues, and supporting modern data workflows.
             </p>
 
             <div class="repo-meta" data-repo="ReginaldErzoah/Aniwa">
-  <span class="repo-release">Version --</span>
-  <span class="repo-updated">Released --</span>
-</div>
+              <span class="repo-release">Version --</span>
+              <span class="repo-updated">Released --</span>
+            </div>
 
             <a class="project-button" href="https://github.com/ReginaldErzoah/Aniwa" target="_blank" rel="noreferrer">
               View Repo
@@ -482,9 +615,10 @@
           </div>
         </article>
 
+        <!-- DATA DRIFT -->
         <article class="showcase-item reveal">
           <div class="showcase-media">
-            <img src="images/datadrift-icon.png" alt="Data Drift open source offline arcade game preview" />
+            <img src="images/datadrift-icon.png" alt="Data Drift offline arcade game preview" />
           </div>
 
           <div class="showcase-content">
@@ -492,14 +626,18 @@
             <h3>Data Drift</h3>
 
             <p>
-              Fast-paced offline arcade game where you survive a stream of corrupted data while working as a glowing Data Node. </p>
-            <p> Available as a standalone python game and also a vscode extension. </p>
-  
+              Fast-paced offline arcade game where you survive a stream of corrupted
+              data while working as a glowing Data Node.
+            </p>
+
+            <p>
+              Available as a standalone Python game and also a VS Code extension.
+            </p>
 
             <div class="repo-meta" data-repo="ReginaldErzoah/data-drift">
-  <span class="repo-release">Version --</span>
-  <span class="repo-updated">Released --</span>
-</div>
+              <span class="repo-release">Version --</span>
+              <span class="repo-updated">Released --</span>
+            </div>
 
             <a class="project-button" href="https://github.com/ReginaldErzoah/data-drift" target="_blank" rel="noreferrer">
               View Repo
@@ -511,9 +649,11 @@
             </a>
           </div>
         </article>
+
       </div>
     </section>
 
+    <!-- ARTICLES -->
     <section class="section-pad section-block notes-section" id="notes">
       <div class="notes-header reveal">
         <div>
@@ -556,8 +696,8 @@
           <div class="featured-note-copy">
             <h3>Building Practical ML Systems Beyond Notebooks</h3>
             <p>
-              Moving from experimentation into real-world machine learning
-              systems, workflows, and production-ready tooling.
+              Moving from experimentation into real-world machine learning systems,
+              workflows, and production-ready tooling.
             </p>
           </div>
 
@@ -576,8 +716,8 @@
           <div class="featured-note-copy">
             <h3>Why Data Quality Matters Before Machine Learning</h3>
             <p>
-              A practical look at profiling, validation, and trustworthy
-              datasets before model training begins.
+              A practical look at profiling, validation, and trustworthy datasets
+              before model training begins.
             </p>
           </div>
 
@@ -594,101 +734,85 @@
       </div>
     </section>
 
+    <!-- CONTACT FOOTER -->
     <section class="footer-contact-section" id="contact">
-  <div class="footer-visual-wrap reveal">
+      <div class="footer-visual-wrap reveal">
 
-    <!-- DARK THEME -->
-    <img
-      src="images/footer-dark.png"
-      alt="Developer workspace dark theme"
-      class="footer-visual footer-dark-image"
-    />
+        <img
+          src="images/footer-dark.png"
+          alt="Developer workspace dark theme"
+          class="footer-visual footer-dark-image"
+        />
 
-    <!-- LIGHT THEME -->
-    <img
-      src="images/footer-light.png"
-      alt="Developer workspace light theme"
-      class="footer-visual footer-light-image"
-    />
+        <img
+          src="images/footer-light.png"
+          alt="Developer workspace light theme"
+          class="footer-visual footer-light-image"
+        />
 
-    <!-- OVERLAY CONTENT -->
-    <div class="footer-overlay-card">
-      <h2>Let’s Connect & Collaborate</h2>
+        <div class="footer-overlay-card">
+          <h2>Let’s Connect &amp; Collaborate</h2>
 
-      <div class="footer-social-links">
+          <div class="footer-social-links">
+            <a
+              href="https://github.com/ReginaldErzoah"
+              target="_blank"
+              rel="noreferrer"
+              class="footer-social-btn"
+            >
+              Github
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
 
-  <a
-    href="https://github.com/ReginaldErzoah"
-    target="_blank"
-    rel="noreferrer"
-    class="footer-social-btn"
-  >
-    Github
+            <a
+              href="https://www.linkedin.com/in/reginald-erzoah"
+              target="_blank"
+              rel="noreferrer"
+              class="footer-social-btn"
+            >
+              Linkedin
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
 
-    <span class="arrow-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
-      </svg>
-    </span>
-  </a>
+            <a
+              href="mailto:reginalderzoah10@gmail.com"
+              class="footer-social-btn"
+            >
+              Email
+              <span class="arrow-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
+                </svg>
+              </span>
+            </a>
+          </div>
 
-  <a
-    href="https://www.linkedin.com/in/reginald-erzoah"
-    target="_blank"
-    rel="noreferrer"
-    class="footer-social-btn"
-  >
-    Linkedin
-
-    <span class="arrow-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
-      </svg>
-    </span>
-  </a>
-
-  <a
-    href="mailto:reginalderzoah10@gmail.com"
-    class="footer-social-btn"
-  >
-    Email
-
-    <span class="arrow-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M5 12h11.2l-4.6-4.6L13 6l7 7-7 7-1.4-1.4 4.6-4.6H5v-2z" />
-      </svg>
-    </span>
-  </a>
-
-</div>
-
-      <p class="footer-copyright">
-  © <span id="footerYear"></span> REGINALD ERZOAH
-</p>
-    </div>
-  </div>
-</section>
+          <p class="footer-copyright">
+            © <span id="footerYear"></span> REGINALD ERZOAH
+          </p>
+        </div>
+      </div>
+    </section>
   </main>
 
-<nav class="bottom-nav" aria-label="Sticky quick navigation">
+  <nav class="bottom-nav" aria-label="Sticky quick navigation">
+    <a href="#top" class="bottom-top-link" aria-label="Back to top">
+      <img src="images/favicon.png" alt="RE logo" />
+    </a>
 
-  <a
-    href="#top"
-    class="bottom-top-link"
-    aria-label="Back to top"
-  >
-    <img
-      src="images/favicon.png"
-      alt="RE logo"
-    />
-  </a>
-
-  <a href="#projects">Projects</a>
-  <a href="#open-source">OSS</a>
-  <a href="articles/index.html">Articles</a>
-  <a href="#contact">Contact</a>
-
-</nav>
+    <a href="#projects">Projects</a>
+    <a href="#open-source">OSS</a>
+    <a href="articles/index.html">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
   <script src="script.js"></script>
 </body>
